@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StatusBar from "@/components/StatusBar";
+import TopNavBar from "@/components/TopNavBar";
+import GreetingSection from "@/components/GreetingSection";
+import UpcomingDeadlinesCard from "@/components/UpcomingDeadlinesCard";
+import TodayStudyPlanCard from "@/components/TodayStudyPlanCard";
+import ReminderBanner from "@/components/ReminderBanner";
+import BottomNavBar from "@/components/BottomNavBar";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background max-w-md mx-auto relative">
+      {/* Status Bar */}
+      <StatusBar />
+      
+      {/* Top Navigation */}
+      <TopNavBar />
+      
+      {/* Main Content */}
+      <main className="pb-28 space-y-4">
+        {/* Greeting */}
+        <GreetingSection name="John" />
+        
+        {/* Upcoming Deadlines Card */}
+        <UpcomingDeadlinesCard />
+        
+        {/* Today's Study Plan Card */}
+        <TodayStudyPlanCard />
+        
+        {/* Reminder Banner */}
+        <ReminderBanner />
+      </main>
+      
+      {/* Bottom Navigation */}
+      <BottomNavBar />
     </div>
   );
 };
